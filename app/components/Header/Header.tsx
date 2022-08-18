@@ -17,7 +17,7 @@ export default function Header(): JSX.Element {
                 <div className="flex justify-between items-center">
                     <h1 className="font-mono">{t.Analysis_Chart}</h1>
 
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-s-4">
                         <LanguageSwitcher />
                         <ThemeSwitcher />
                     </div>

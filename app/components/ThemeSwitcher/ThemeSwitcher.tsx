@@ -29,7 +29,7 @@ export default function ThemeSwitcher(): JSX.Element {
         return (
             <button
                 type="button"
-                className="bg-cyan-700 hover:bg-cyan-800 px-4 py-2 rounded-full text-sm flex items-center space-x-2"
+                className="bg-cyan-700 hover:bg-cyan-800 px-4 py-2 rounded-full text-sm flex items-center space-s-2"
                 onClick={() => changeTheme(Theme.Dark)}
             >
                 <MoonIcon className="w-4 h-4" />
@@ -40,7 +40,7 @@ export default function ThemeSwitcher(): JSX.Element {
     return (
         <button
             type="button"
-            className="bg-cyan-700 hover:bg-cyan-800 px-4 py-2 rounded-full text-sm flex items-center space-x-2"
+            className="bg-cyan-700 hover:bg-cyan-800 px-4 py-2 rounded-full text-sm flex items-center space-s-2"
             onClick={() => changeTheme(Theme.Light)}
         >
             <SunIcon className="w-4 h-4" />

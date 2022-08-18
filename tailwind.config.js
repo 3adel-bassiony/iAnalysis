@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const tailwindcssRTL = require('tailwindcss-rtl');
+
 module.exports = {
     content: ['./pages/**/*.{js,ts,jsx,tsx}', './app/**/*.{js,ts,jsx,tsx}'],
     theme: {
@@ -7,6 +10,6 @@ module.exports = {
         },
         extend: {},
     },
-    plugins: [],
+    plugins: [tailwindcssRTL],
     darkMode: 'class',
 };
