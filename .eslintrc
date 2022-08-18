@@ -19,7 +19,13 @@
         "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
         "import/no-unresolved": "off",
         "react-hooks/exhaustive-deps": "warn",
-        "camelcase": "off"
+        "camelcase": "off",
+        "react/jsx-props-no-spreading": [2, {
+            "html": "ignore",
+            "custom": "enforce",
+            "explicitSpread": "enforce",
+            "exceptions": ["Component"]
+        }]
     },
     "env": {
         "jest": true,

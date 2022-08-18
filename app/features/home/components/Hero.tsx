@@ -20,6 +20,7 @@ export default function Hero(): JSX.Element {
                 <li className="inline hover:underline">Prettier</li>
                 <li className="inline hover:underline">Axios & useSWR</li>
                 <li className="inline hover:underline">Multi-lang</li>
+                <li className="inline hover:underline">RTL</li>
             </ul>
             <p className="mx-auto text-slate-700 mt-20">
                 Created By:{' '}
