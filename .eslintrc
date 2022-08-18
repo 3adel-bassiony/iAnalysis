@@ -1,0 +1,30 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
+    "extends": ["airbnb-typescript", "airbnb-typescript-prettier"],
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "no-param-reassign": [
+            "error",
+            {
+                "props": true,
+                "ignorePropertyModificationsFor": ["state"]
+            }
+        ]
+    },
+    "rules": {
+        "react/prop-types": 0,
+        "react/react-in-jsx-scope": 0,
+        "@typescript-eslint/no-var-requires": 0,
+        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+        "import/no-unresolved": "off",
+        "react-hooks/exhaustive-deps": "warn",
+        "camelcase": "off"
+    },
+    "env": {
+        "jest": true,
+        "browser": true,
+        "amd": true,
+        "node": true
+    }
+}
