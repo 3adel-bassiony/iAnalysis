@@ -25,7 +25,7 @@ const customJestConfig = {
     moduleNameMapper: {
         '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
         '@components/(.*)': '<rootDir>/app/components/$1',
-        '@constants/(.*)': '<rootDir>/app/constants/$1',
+        '@context/(.*)': '<rootDir>/app/context/$1',
         '@features/(.*)': '<rootDir>/app/features/$1',
         '@hooks/(.*)': '<rootDir>/app/hooks/$1',
         '@layouts/(.*)': '<rootDir>/app/layouts/$1',

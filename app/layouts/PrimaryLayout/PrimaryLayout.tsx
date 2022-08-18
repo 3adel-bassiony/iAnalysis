@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
+import Header from '@components/Header/Header';
 
 type PrimaryLayoutProps = {
     children: ReactNode;
@@ -46,6 +47,7 @@ export default function PrimaryLayout({
 
             {/* Children */}
             <div className={className}>
+                <Header />
                 <div>{children}</div>
             </div>
         </>
