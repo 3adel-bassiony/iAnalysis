@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
 import useTranslations from '@hooks/useTranslations';
-import { Theme } from '@context/theme/enums/Theme';
-import useThemeContext from '@context/theme/hooks/useThemeContext';
+import { useTheme } from 'next-themes';
 import { SunIcon, MoonIcon } from '@heroicons/react/outline';
 
 export default function ThemeSwitcher(): JSX.Element {
@@ -9,42 +7,19 @@ export default function ThemeSwitcher(): JSX.Element {
     // Component States / Variables / Constants
     // ----------------------------------------------------------------------------------------------------
     const { t } = useTranslations();
-    const { theme, changeTheme } = useThemeContext();
-
-    // ----------------------------------------------------------------------------------------------------
-    // Component Side Effects
-    // ----------------------------------------------------------------------------------------------------
-    useEffect(() => {
-        if (theme === Theme.Light) {
-            document.documentElement.className = 'light';
-        } else {
-            document.documentElement.className = `dark`;
-        }
-    }, [theme]);
+    const { theme, setTheme } = useTheme();
 
     // ----------------------------------------------------------------------------------------------------
     // Main Component Body UI
     // ----------------------------------------------------------------------------------------------------
-    if (theme === Theme.Light) {
-        return (
-            <button
-                type="button"
-                className="bg-cyan-700 hover:bg-cyan-800 px-4 py-2 rounded-full text-sm flex items-center space-s-2"
-                onClick={() => changeTheme(Theme.Dark)}
-            >
-                <MoonIcon className="w-4 h-4" />
-                <p>{t.Dark_Mode}</p>
-            </button>
-        );
-    }
     return (
         <button
             type="button"
             className="bg-cyan-700 hover:bg-cyan-800 px-4 py-2 rounded-full text-sm flex items-center space-s-2"
-            onClick={() => changeTheme(Theme.Light)}
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
-            <SunIcon className="w-4 h-4" />
-            <p>{t.Light_Mode}</p>
+            {theme === 'light' ? <MoonIcon className="w-4 h-4" /> : <SunIcon className="w-4 h-4" />}
+            <p>{theme === 'light' ? t.Dark_Mode : t.Light_Mode}</p>
         </button>
     );
 }

@@ -2,10 +2,10 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import axios from 'axios';
 import { SWRConfig } from 'swr';
+import { ThemeProvider } from 'next-themes';
 
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import { ThemeProvider } from '@context/theme/ThemeContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
     // ----------------------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     // Main Component Body UI
     // ----------------------------------------------------------------------------------------------------
     return (
-        <ThemeProvider>
+        <ThemeProvider attribute="class">
             <SWRConfig
                 value={{
                     fetcher: (url) => axios.get(url).then((res) => res.data),

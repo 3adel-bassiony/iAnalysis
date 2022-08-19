@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
+import Loader from '@components/Loader/Loader';
 import Header from '@components/Header/Header';
 
 type PrimaryLayoutProps = {
@@ -11,6 +12,7 @@ type PrimaryLayoutProps = {
     image?: string;
     type?: string;
     url?: string;
+    isLoading?: boolean;
 };
 
 export default function PrimaryLayout({
@@ -22,6 +24,7 @@ export default function PrimaryLayout({
     image,
     type,
     url,
+    isLoading,
 }: PrimaryLayoutProps): JSX.Element {
     return (
         <>
@@ -47,8 +50,14 @@ export default function PrimaryLayout({
 
             {/* Children */}
             <div className={className}>
-                <Header />
-                <div className="container py-8">{children}</div>
+                {isLoading ? (
+                    <Loader />
+                ) : (
+                    <>
+                        <Header />
+                        <div className="container py-8">{children}</div>
+                    </>
+                )}
             </div>
         </>
     );
@@ -62,4 +71,5 @@ PrimaryLayout.defaultProps = {
     image: null,
     type: null,
     url: null,
+    isLoading: false,
 };
