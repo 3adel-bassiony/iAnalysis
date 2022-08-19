@@ -29,10 +29,10 @@ export default function Filter({ analytics, country, setCountry, camp, setCamp, 
     // Main Component Body UI
     // ----------------------------------------------------------------------------------------------------
     return (
-        <div className="grid grid-cols-3 items-start gap-8">
+        <div className="grid lg:grid-cols-3 items-start gap-8">
             {/* Countries Menu */}
             <div className="space-y-1">
-                <p className="block text-sm font-medium text-gray-700">{t.Country}</p>
+                <p className="block text-sm font-medium text-gray-700 dark:text-slate-300">{t.Country}</p>
                 <select name="location" className={selectClasses} value={country} onChange={(e) => setCountry(e.target.value)}>
                     <option value="">{t.Show_All}</option>
                     {countries.map((element) => (
@@ -45,7 +45,7 @@ export default function Filter({ analytics, country, setCountry, camp, setCamp, 
 
             {/* Camps Menu */}
             <div className="space-y-1">
-                <p className="block text-sm font-medium text-gray-700">{t.Camp}</p>
+                <p className="block text-sm font-medium text-gray-700 dark:text-slate-300">{t.Camp}</p>
                 <select name="location" className={selectClasses} value={camp} onChange={(e) => setCamp(e.target.value)}>
                     <option value="">{t.Show_All}</option>
                     {camps.map((element) => (
@@ -58,7 +58,7 @@ export default function Filter({ analytics, country, setCountry, camp, setCamp, 
 
             {/* Schools Menu */}
             <div className="space-y-1">
-                <p className="block text-sm font-medium text-gray-700">{t.School}</p>
+                <p className="block text-sm font-medium text-gray-700 dark:text-slate-300">{t.School}</p>
                 <select name="location" className={selectClasses} value={school} onChange={(e) => setSchool(e.target.value)}>
                     <option value="">{t.Show_All}</option>
                     {schools.map((element) => (

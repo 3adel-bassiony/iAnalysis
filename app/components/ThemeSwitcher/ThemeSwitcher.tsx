@@ -19,7 +19,7 @@ export default function ThemeSwitcher(): JSX.Element {
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
             {theme === 'light' ? <MoonIcon className="w-4 h-4" /> : <SunIcon className="w-4 h-4" />}
-            <p>{theme === 'light' ? t.Dark_Mode : t.Light_Mode}</p>
+            <p className="hidden lg:block">{theme === 'light' ? t.Dark_Mode : t.Light_Mode}</p>
         </button>
     );
 }

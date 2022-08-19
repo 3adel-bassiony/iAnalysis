@@ -32,8 +32,8 @@ export default function Dashboard(): JSX.Element {
                     setSchool={setSchool}
                 />
 
-                <div className="grid grid-cols-3 h-96 gap-8">
-                    <Chart analytics={data} selectedSchools={selectedSchools} className="col-span-2" />
+                <div className="grid lg:grid-cols-3 h-96 gap-8">
+                    <Chart analytics={data} selectedSchools={selectedSchools} className="lg:col-span-2" />
                     <Summary
                         analytics={data}
                         country={country}

@@ -55,7 +55,7 @@ export default function PrimaryLayout({
                 ) : (
                     <>
                         <Header />
-                        <div className="container py-8">{children}</div>
+                        <div className="container py-8 px-8 lg:px-0">{children}</div>
                     </>
                 )}
             </div>

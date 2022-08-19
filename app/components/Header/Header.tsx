@@ -13,7 +13,7 @@ export default function Header(): JSX.Element {
     // ----------------------------------------------------------------------------------------------------
     return (
         <div className="py-6 bg-cyan-700 dark:bg-cyan-900 text-white">
-            <div className="container">
+            <div className="container px-8 lg:px-0">
                 <div className="flex justify-between items-center">
                     <h1 className="font-mono">{t.Analysis_Chart}</h1>
 

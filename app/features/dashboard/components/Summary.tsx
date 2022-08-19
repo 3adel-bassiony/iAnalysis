@@ -74,7 +74,7 @@ export default function Summary({
                         className={`flex items-center gap-4 ${
                             selectedSchools.includes(item.school)
                                 ? 'text-cyan-600 dark:text-cyan-400'
-                                : 'text-slate-800 dark:text-slate-100'
+                                : 'text-slate-800 dark:text-slate-400'
                         }`}
                         onClick={() => toggleSchool(item.school)}
                     >
