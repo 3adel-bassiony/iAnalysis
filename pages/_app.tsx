@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     // App Configurations
     // ----------------------------------------------------------------------------------------------------
     // Axios Config
-    axios.defaults.baseURL = process.env.NEXT_PUBLIC_APP_API_URL;
+    // axios.defaults.baseURL = process.env.NEXT_PUBLIC_APP_API_URL;
     axios.defaults.headers.common['Accept-Language'] = router?.locale;
 
     // ----------------------------------------------------------------------------------------------------
