@@ -42,9 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     shouldRetryOnError: false,
                 }}
             >
-                <div className="dark">
-                    <Component {...pageProps} />
-                </div>
+                <Component {...pageProps} />
             </SWRConfig>
         </ThemeProvider>
     );

@@ -15,7 +15,7 @@ export default function ThemeSwitcher(): JSX.Element {
     return (
         <button
             type="button"
-            className="bg-cyan-700 hover:bg-cyan-800 px-4 py-2 rounded-full text-sm flex items-center space-s-2"
+            className="bg-cyan-800 dark:bg-cyan-800 hover:bg-cyan-900 dark:hover:bg-cyan-700 px-4 py-2 rounded-full text-sm flex items-center space-s-2"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
             {theme === 'light' ? <MoonIcon className="w-4 h-4" /> : <SunIcon className="w-4 h-4" />}
